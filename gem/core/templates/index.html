@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filters %}
+
+{% block content %}
+
+    <div class="container">
+         <div class="row">
+
+            <section id="main">
+                <div class="main col-md-6 padding-bottom-50">
+                    <section class="main-form">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+
+                            {% for field in form %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <label for={{ field.id_for_label }}>{{ field.label }}</label>
+                                        {{ field.errors }}
+                                        {{ field|addcss:"form-control" }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+
+                            <button type="submit" name="go" class="btn btn-primary">Calcular</button>
+
+                        </form>
+                    </section>
+                </div>
+
+            </section>
+        </div>
+
+        
+</div>
+
+{% endblock content %}

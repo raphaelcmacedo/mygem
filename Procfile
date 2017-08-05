@@ -1,1 +1,1 @@
-web: gunicorn folha.wsgi --log-file -
+web: gunicorn gem.wsgi --log-file -
