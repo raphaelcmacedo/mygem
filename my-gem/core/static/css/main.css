@@ -1,0 +1,185 @@
+/* Customização */
+
+.padding-bottom-10{
+    padding-bottom: 10px;
+}
+
+.padding-bottom-20{
+    padding-bottom: 20px;
+}
+
+.padding-bottom-30{
+    padding-bottom: 30px;
+}
+
+.padding-bottom-40{
+    padding-bottom: 40px;
+}
+
+.padding-bottom-50{
+    padding-bottom: 50px;
+}
+
+/* Header */
+
+.logo h1 a {
+    line-height: 200px;
+    width: 131px;
+    height: 55px;
+    margin: 1px 0 0 -9px;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0) url("../img/logo.png") no-repeat scroll left bottom;
+}
+
+
+@media all and (min-width:900px) {
+
+    .nav-inline li a {
+        color: #ffffff;
+    }
+    .nav-inline li p {
+        color: #ffffff;
+        font-size: medium;
+    }
+    .header-inline .nav-inline li {
+        margin: 0 0 0 3.5em;
+    }
+    .header-frame-absolute .nav-inline li a:hover { color: #3498DB;}
+    .header-frame-fixed .nav-inline li a:hover { color: #333333;}
+
+}
+
+@media all and (max-width:900px) {
+
+    .nav-mobile {
+        color: #ffffff;
+    }
+
+    .header-inline .nav-inline {
+        background: transparent;
+    }
+    .header-inline .nav-inline:hover {
+        background: #ffffff;
+    }
+
+}
+/* Contents */
+
+
+/* Applying white text on a darker barckground */
+
+#top,
+#register {
+    color: #ffffff;
+}
+
+#top {
+    display:table;
+    width:100%;
+    max-height: auto;
+    height:600px;
+    background:url(../img/top-bg.jpg) bottom center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:relative;
+
+}
+
+
+#map-canvas {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    top: 0;
+    z-index: -1;
+}
+
+@media all and (min-width:900px) {
+
+    .venue {
+        margin-top: 60px;
+    }
+
+    #map-canvas {
+        width: 100%;
+        min-height: 430px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+}
+
+.alert{
+    padding: 0 15px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert p{
+    padding: 7px 0 7px;
+}
+
+.alert.success{
+    color: #3c763d;
+    background-color: #dff0d8;
+    boder-color:#d0e9c6;
+}
+
+.contra-cheque-item
+{
+    display: inline-block;
+}
+
+.alert{
+    padding: 0 15px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert p{
+    padding: 7px 0 7px;
+}
+
+.alert.success{
+    color: #3c763d;
+    background-color: #dff0d8;
+    boder-color:#d0e9c6;
+}
+
+.contra-cheque-item {
+    display: inline-block;
+}
+
+
+.input-group {
+    /*background-color: rgb(50, 118, 177);
+    color: rgb(255, 255, 255);*/
+    border-color: rgb(40, 94, 142);
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+}
+
+/*
+.form-control:focus
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+*/
+
+.btn{
+    width: 70px;
+}
+
+/* Fim Customização */

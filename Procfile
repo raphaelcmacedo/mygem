@@ -1,0 +1,1 @@
+web: gunicorn folha.wsgi --log-file -

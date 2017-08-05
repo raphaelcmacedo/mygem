@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% if background %}
+        <section id="background">
+            <div class="failures text-align-center row desktop-8 padding-bottom-2 container">
+                <h5>Devido a quantidade de arquivos o processamento será feito em segundo plano. Um e-mail será enviado para sua caixa assim que todos os arquivos forem consumidos.</h5>
+            </div>
+
+        </section>
+    {% else %}
+        <section id="sucesses">
+            <div class="sucesses text-align-center row desktop-8 padding-bottom-2 container">
+                <section class="sucesses">
+                    <div class="list-group">
+                        <h3>Os seguintes arquivos foram importados com sucesso:</h3>
+                        {% for mensagem in sucesses %}
+                             <p class="list-group-item">{{ mensagem }}</p>
+                        {% empty %}
+                            <p class="list-group-item">Nenhum arquivo foi importado com sucesso.</p>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+
+        </section>
+
+        <section id="failures">
+            <div class="failures text-align-center row desktop-8 padding-bottom-2 container">
+                <section class="failures">
+                    <div class="list-group">
+                        <h3>Os seguintes arquivos não foram importados:</h3>
+                        {% for mensagem in failures %}
+                             <p class="list-group-item">{{ mensagem }}</p>
+                        {% empty %}
+                            <p class="list-group-item">Todos os arquivos foram adicionados com sucesso.</p>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+        </section>
+    {% endif %}
+
+
+
+{% endblock content %}

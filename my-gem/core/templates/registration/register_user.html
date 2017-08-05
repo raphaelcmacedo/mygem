@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load filters %}
+{% load static %}
+
+{% block content %}
+    <script src="{% static 'js/register_user.js' %}"></script>
+    <div class="container">
+        <div class="row">
+
+            <div class="user col-md-8 padding-bottom-50">
+                <div class="well bs-component">
+                    <form action="." method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Novo Usuário</legend>
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+
+                            {% for field in form %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <label for={{ field.id_for_label }}>{{ field.label }}</label>
+                                        {{ field.errors }}
+                                        {{ field|addcss:"form-control" }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            <button type="submit" name="go" class="btn btn-primary">Enviar</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+{% endblock %}
